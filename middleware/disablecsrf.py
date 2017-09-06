@@ -1,0 +1,4 @@
+# conding:utf-8
+class DisableCSRFCheck(object):
+    def process_request(self, request):
+        setattr(request, '_dont_enforce_csrf_checks', True)
